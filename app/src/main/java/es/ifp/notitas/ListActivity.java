@@ -10,10 +10,18 @@ import android.widget.Toast;
 
 public class ListActivity extends AppCompatActivity {
 
+    protected DataBaseSQL db;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
+
+        db = new DataBaseSQL(this);
+        System.out.println("-->Numero de notas:" + db.numberOfNotes());
+        db.insertNote("Bajar al perro");
+        System.out.println("-->Numero de notas:" + db.numberOfNotes());
+
     }
 
     @Override
