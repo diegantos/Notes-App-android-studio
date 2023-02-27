@@ -2,11 +2,14 @@ package es.ifp.notitas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -28,7 +31,7 @@ public class StartActivity extends AppCompatActivity {
         TimerTask myTimerTask = new TimerTask() {
             @Override
             public void run() {
-                pasarPantalla = new Intent(StartActivity.this, StartActivity.this);
+                pasarPantalla = new Intent(StartActivity.this, ListActivity.this);
                 finish();
                 startActivity(pasarPantalla);
             }
