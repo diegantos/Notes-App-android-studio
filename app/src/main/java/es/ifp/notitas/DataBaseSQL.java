@@ -1,5 +1,6 @@
 package es.ifp.notitas;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.DatabaseUtils;
@@ -46,6 +47,7 @@ public class DataBaseSQL extends SQLiteOpenHelper {
         num = (int) DatabaseUtils.queryNumEntries(db, "notes");
         return num;
     }
+    @SuppressLint("Range")
     public ArrayList<String> getAllNotes(){
         ArrayList<String> filas = new ArrayList<String>();
         String contenido = "";
@@ -55,7 +57,7 @@ public class DataBaseSQL extends SQLiteOpenHelper {
         res.moveToFirst();
         while (res.isAfterLast()==false){
             contenido = res.getString(res.getColumnIndex("title"));
-            System.out.println("-->" + contenido);
+            //System.out.println("-->" + contenido);
             filas.add(contenido);
             res.moveToNext();
         }

@@ -5,6 +5,40 @@
     android:layout_width="match_parent"
     android:background="@drawable/bg_color"
     android:layout_height="match_parent"
-    tools:context=".DeleteNoteActivity">
+    tools:context=".DeleteAllNotesActivity">
 
+    <TextView
+        android:id="@+id/label1_delete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_horizontal"
+        android:text="¿Desea borrar realmente todas las notas?"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn1_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Borrar todas las notas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label1_delete" />
+
+    <Button
+        android:id="@+id/btn2_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Volver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn1_delete" />
 </androidx.constraintlayout.widget.ConstraintLayout>

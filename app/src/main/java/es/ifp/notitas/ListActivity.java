@@ -10,7 +10,6 @@ import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -33,9 +32,8 @@ public class ListActivity extends AppCompatActivity {
 
         db = new DataBaseSQL(this);
 
-        db.insertNote("Bajar al perro");
-        db.insertNote("Hacer la colada");
-
+        //db.insertNote("Bajar al perro");
+        //db.insertNote("Hacer la colada");
 
         filas = db.getAllNotes();
         adaptador = new ArrayAdapter<String>(ListActivity.this, android.R.layout.simple_list_item_1, filas);
@@ -59,9 +57,9 @@ public class ListActivity extends AppCompatActivity {
                 startActivity(pasarPantalla);
                 return true;
             case R.id.item_opciones_start:
-                Intent pasarPantalla = new Intent(ListActivity.this, DeleteNoteActivity.class);
+                Intent pasarPantalla2 = new Intent(ListActivity.this, DeleteAllNotesActivity.class);
                 finish();
-                startActivity(pasarPantalla);
+                startActivity(pasarPantalla2);
                 //System.exit(0);
                 return true;
             default:

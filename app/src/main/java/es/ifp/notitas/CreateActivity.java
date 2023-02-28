@@ -16,7 +16,7 @@ public class CreateActivity extends AppCompatActivity {
     protected EditText input1;
     protected Button btn1;
     protected Button btn2;
-    private String texto;
+    protected String texto;
     protected DataBaseSQL db;
     private Intent pasarPantalla;
 
@@ -31,24 +31,27 @@ public class CreateActivity extends AppCompatActivity {
         btn1 = (Button) findViewById(R.id.btn1_create);
         btn2 = (Button) findViewById(R.id.btn2_create);
 
-        btn1.setOnClickListener(new View.OnClickListener() { // BOTON DE CREAR
+        db = new DataBaseSQL(this);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 texto = input1.getText().toString();
                 if(texto.equals("")){
+                    System.out.println("-->Hasta aquí todo bien");
                     Toast.makeText(CreateActivity.this, "Debe introducir una nota", Toast.LENGTH_SHORT).show();
                 }else{
-                    //Toast.makeText(CreateActivity.this, "Nota insertada", Toast.LENGTH_SHORT).show();
+                    System.out.println("-->Hasta aquí todo bien vale");
                     db.insertNote(texto);
-                    pasarPantalla = new Intent(CreateActivity.this, ListActivity.class);
-                    finish();
-                    startActivity(pasarPantalla);
                     Toast.makeText(CreateActivity.this, "Nota insertada", Toast.LENGTH_SHORT).show();
+                    pasarPantalla = new Intent(CreateActivity.this, ListActivity.class);
+                    pasarPantalla.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    startActivity(pasarPantalla);
                 }
             }
         });
 
-        btn2.setOnClickListener(new View.OnClickListener() { // BOTON DE VOLVER
+        btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 pasarPantalla = new Intent(CreateActivity.this, ListActivity.class);
