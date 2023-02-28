@@ -7,8 +7,6 @@ import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import androidx.annotation.Nullable;
-
 import java.util.ArrayList;
 
 public class DataBaseSQL extends SQLiteOpenHelper {
@@ -42,23 +40,18 @@ public class DataBaseSQL extends SQLiteOpenHelper {
         db.execSQL("DELETE FROM notes");
     }
     public int numberOfNotes(){
-        int num = 0;
         db = this.getReadableDatabase();
-        num = (int) DatabaseUtils.queryNumEntries(db, "notes");
-        return num;
+        return (int) DatabaseUtils.queryNumEntries(db, "notes");
     }
     @SuppressLint("Range")
     public ArrayList<String> getAllNotes(){
-        ArrayList<String> filas = new ArrayList<String>();
-        String contenido = "";
-        Cursor res = null;
+        ArrayList<String> filas = new ArrayList<>();
         db = this.getReadableDatabase();
-        res = db.rawQuery("SELECT * FROM notes ORDER BY id ASC", null);
+        Cursor res = db.rawQuery("SELECT * FROM notes ORDER BY id ASC", null);
         res.moveToFirst();
-        while (res.isAfterLast()==false){
-            contenido = res.getString(res.getColumnIndex("title"));
+        while (!res.isAfterLast()){
             //System.out.println("-->" + contenido);
-            filas.add(contenido);
+            filas.add(res.getString(res.getColumnIndex("title")));
             res.moveToNext();
         }
         return filas;

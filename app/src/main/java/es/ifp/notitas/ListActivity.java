@@ -19,9 +19,6 @@ public class ListActivity extends AppCompatActivity {
     protected ListView lista1;
     protected DataBaseSQL db;
 
-    private ArrayList<String> filas = new ArrayList<String>();
-    private ArrayAdapter<String> adaptador;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,11 +29,8 @@ public class ListActivity extends AppCompatActivity {
 
         db = new DataBaseSQL(this);
 
-        //db.insertNote("Bajar al perro");
-        //db.insertNote("Hacer la colada");
-
-        filas = db.getAllNotes();
-        adaptador = new ArrayAdapter<String>(ListActivity.this, android.R.layout.simple_list_item_1, filas);
+        ArrayList<String> filas = db.getAllNotes();
+        ArrayAdapter<String> adaptador = new ArrayAdapter<>(ListActivity.this, android.R.layout.simple_list_item_1, filas);
         lista1.setAdapter(adaptador);
     }
 
@@ -50,20 +44,16 @@ public class ListActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
-        switch (item.getItemId()) {
-            case R.id.item_crear_start:
-                Intent pasarPantalla = new Intent(ListActivity.this, CreateActivity.class);
-                finish();
-                startActivity(pasarPantalla);
-                return true;
-            case R.id.item_opciones_start:
-                Intent pasarPantalla2 = new Intent(ListActivity.this, DeleteAllNotesActivity.class);
-                finish();
-                startActivity(pasarPantalla2);
-                //System.exit(0);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        if (item.getItemId() == R.id.item_crear_start) {
+            finish();
+            startActivity(new Intent(ListActivity.this, CreateActivity.class));
+            return true;
         }
+        if (item.getItemId() == R.id.item_opciones_start) {
+            finish();
+            startActivity(new Intent(ListActivity.this, DeleteAllNotesActivity.class));
+            return true;
+        }
+        else return super.onOptionsItemSelected(item);
     }
 }
