@@ -2,6 +2,7 @@ package es.ifp.notitas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -18,6 +19,7 @@ public class ListActivity extends AppCompatActivity {
     protected TextView label1;
     protected ListView lista1;
     protected DataBaseSQL db;
+
     private ArrayList<String> filas = new ArrayList<String>();
     private ArrayAdapter<String> adaptador;
 
@@ -52,7 +54,9 @@ public class ListActivity extends AppCompatActivity {
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.item_crear_start:
-                Toast.makeText(this, "Estás intentando añadir un elemento", Toast.LENGTH_SHORT).show();
+                Intent pasarPantalla = new Intent(ListActivity.this, CreateActivity.class);
+                finish();
+                startActivity(pasarPantalla);
                 return true;
             case R.id.item_opciones_start:
                 System.exit(0);

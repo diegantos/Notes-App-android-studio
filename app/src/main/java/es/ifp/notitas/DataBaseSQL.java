@@ -54,8 +54,7 @@ public class DataBaseSQL extends SQLiteOpenHelper {
         res = db.rawQuery("SELECT * FROM notes ORDER BY id ASC", null);
         res.moveToFirst();
         while (res.isAfterLast()==false){
-            //contenido = res.getString(res.getColumnIndex("title"));
-            contenido = res.getInt(res.getColumnIndex("id")) + ".-" + res.getString(res.getColumnIndex("title"));
+            contenido = res.getString(res.getColumnIndex("title"));
             System.out.println("-->" + contenido);
             filas.add(contenido);
             res.moveToNext();
