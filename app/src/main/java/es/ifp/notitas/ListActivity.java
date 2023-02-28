@@ -59,7 +59,10 @@ public class ListActivity extends AppCompatActivity {
                 startActivity(pasarPantalla);
                 return true;
             case R.id.item_opciones_start:
-                System.exit(0);
+                Intent pasarPantalla = new Intent(ListActivity.this, DeleteNoteActivity.class);
+                finish();
+                startActivity(pasarPantalla);
+                //System.exit(0);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

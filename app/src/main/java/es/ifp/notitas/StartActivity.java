@@ -28,7 +28,7 @@ public class StartActivity extends AppCompatActivity {
         TimerTask myTimerTask = new TimerTask() {
             @Override
             public void run() {
-                pasarPantalla = new Intent(StartActivity.this, CreateActivity.class);
+                pasarPantalla = new Intent(StartActivity.this, ListActivity.class);
                 finish();
                 startActivity(pasarPantalla);
             }
