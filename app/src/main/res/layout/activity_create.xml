@@ -7,6 +7,16 @@
     android:layout_height="match_parent"
     tools:context=".CreateActivity">
 
+    <Button
+        android:id="@+id/btn2_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Volver"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn1_create"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/label1_create"
         android:layout_width="0dp"
@@ -28,11 +38,8 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Pulse para escribir aquí"
-        app:layout_constraintBottom_toTopOf="@+id/_dynamic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/label1_create" />
@@ -41,9 +48,9 @@
         android:id="@+id/btn1_create"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="76dp"
         android:layout_marginBottom="32dp"
         android:text="Crear"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

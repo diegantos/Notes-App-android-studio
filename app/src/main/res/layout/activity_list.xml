@@ -18,11 +18,13 @@
         android:text="Listado de notas"
         android:textAlignment="gravity"
         android:textColor="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
+        android:id="@+id/list1_list"
         android:layout_width="312dp"
         android:layout_height="593dp"
         app:layout_constraintBottom_toBottomOf="parent"

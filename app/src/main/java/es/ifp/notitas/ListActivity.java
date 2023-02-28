@@ -6,22 +6,38 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class ListActivity extends AppCompatActivity {
 
+    protected TextView label1;
+    protected ListView lista1;
     protected DataBaseSQL db;
+    private ArrayList<String> filas = new ArrayList<String>();
+    private ArrayAdapter<String> adaptador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
 
-        db = new DataBaseSQL(this);
-        System.out.println("-->Numero de notas:" + db.numberOfNotes());
-        db.insertNote("Bajar al perro");
-        System.out.println("-->Numero de notas:" + db.numberOfNotes());
+        label1 = (TextView) findViewById(R.id.label1_list);
+        lista1 = (ListView) findViewById(R.id.list1_list);
 
+        db = new DataBaseSQL(this);
+
+        db.insertNote("Bajar al perro");
+        db.insertNote("Hacer la colada");
+
+
+        filas = db.getAllNotes();
+        adaptador = new ArrayAdapter<String>(ListActivity.this, android.R.layout.simple_list_item_1, filas);
+        lista1.setAdapter(adaptador);
     }
 
     @Override

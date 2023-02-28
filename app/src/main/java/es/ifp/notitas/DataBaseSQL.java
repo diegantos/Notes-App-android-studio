@@ -36,6 +36,10 @@ public class DataBaseSQL extends SQLiteOpenHelper {
         db = this.getReadableDatabase();
         db.execSQL("DELETE FROM notes WHERE id=" + id);
     }
+    public void deleteAllNotes(){
+        db = this.getWritableDatabase();
+        db.execSQL("DELETE FROM notes");
+    }
     public int numberOfNotes(){
         int num = 0;
         db = this.getReadableDatabase();
@@ -48,8 +52,12 @@ public class DataBaseSQL extends SQLiteOpenHelper {
         Cursor res = null;
         db = this.getReadableDatabase();
         res = db.rawQuery("SELECT * FROM notes ORDER BY id ASC", null);
+        res.moveToFirst();
         while (res.isAfterLast()==false){
-            contenido = res.getInt(res.getColumnIndex("id")) + res.getString(res.getColumnIndex("title"));
+            //contenido = res.getString(res.getColumnIndex("title"));
+            contenido = res.getInt(res.getColumnIndex("id")) + ".-" + res.getString(res.getColumnIndex("title"));
+            System.out.println("-->" + contenido);
+            filas.add(contenido);
             res.moveToNext();
         }
         return filas;

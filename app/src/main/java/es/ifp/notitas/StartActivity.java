@@ -20,6 +20,7 @@ public class StartActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().hide();
 
         label1 = (TextView) findViewById(R.id.label1_start);
         img1 = (ImageView) findViewById(R.id.img1_start);
@@ -27,7 +28,7 @@ public class StartActivity extends AppCompatActivity {
         TimerTask myTimerTask = new TimerTask() {
             @Override
             public void run() {
-                pasarPantalla = new Intent(StartActivity.this, ListActivity.class);
+                pasarPantalla = new Intent(StartActivity.this, CreateActivity.class);
                 finish();
                 startActivity(pasarPantalla);
             }
