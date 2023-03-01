@@ -6,12 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class ShowNoteActivity extends AppCompatActivity {
 
     protected ListView list1;
     protected Button btn1;
     protected Button btn2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +34,7 @@ public class ShowNoteActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Toast.makeText(ShowNoteActivity.this, "He pulsado en borrar", Toast.LENGTH_SHORT).show();
             }
         });
     }

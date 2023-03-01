@@ -7,9 +7,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -21,6 +24,8 @@ public class ListActivity extends AppCompatActivity {
 
     private ArrayList<String> filas = new ArrayList<String>();
     private ArrayAdapter<String> adaptador;
+    private String contenidoItem = "";
+    private String[] partes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +37,27 @@ public class ListActivity extends AppCompatActivity {
 
         db = new DataBaseSQL(this);
 
-        //db.insertNote("Bajar al perro");
-        //db.insertNote("Hacer la colada");
-
         filas = db.getAllNotes();
         adaptador = new ArrayAdapter<String>(ListActivity.this, android.R.layout.simple_list_item_1, filas);
         lista1.setAdapter(adaptador);
+
+        lista1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+            }
+        });
+
+        lista1.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                contenidoItem = adapterView.getItemAtPosition(i).toString();
+                Toast.makeText(ListActivity.this, "He pulsado A", Toast.LENGTH_SHORT).show();
+
+                return false;
+            }
+        });
     }
 
     @Override
