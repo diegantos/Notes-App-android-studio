@@ -38,12 +38,10 @@ public class CreateActivity extends AppCompatActivity {
             public void onClick(View view) {
                 texto = input1.getText().toString();
                 if(texto.equals("")){
-                    System.out.println("-->Hasta aquí todo bien");
                     Toast.makeText(CreateActivity.this, "Debe introducir una nota", Toast.LENGTH_SHORT).show();
                 }else{
-                    System.out.println("-->Hasta aquí todo bien vale");
                     db.insertNote(texto);
-                    Toast.makeText(CreateActivity.this, "Nota insertada", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CreateActivity.this, "Nota creada correctamente", Toast.LENGTH_SHORT).show();
                     pasarPantalla = new Intent(CreateActivity.this, ListActivity.class);
                     pasarPantalla.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     startActivity(pasarPantalla);
