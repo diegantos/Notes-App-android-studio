@@ -44,7 +44,9 @@ public class ListActivity extends AppCompatActivity {
         lista1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
+                Intent pasarPantalla = new Intent(ListActivity.this, ShowNoteActivity.class);
+                finish();
+                startActivity(pasarPantalla);
             }
         });
 
@@ -53,9 +55,11 @@ public class ListActivity extends AppCompatActivity {
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
 
                 contenidoItem = adapterView.getItemAtPosition(i).toString();
+                partes = contenidoItem.split(" ");
+                System.out.println("-->partes");
                 Toast.makeText(ListActivity.this, "He pulsado A", Toast.LENGTH_SHORT).show();
 
-                return false;
+                return true;
             }
         });
     }
