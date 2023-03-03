@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">notitas</string>
+    <string name="app_name">Notas</string>
+    <string name="label1_text">Introduzca su nombre</string>
+    <string name="caja1_text">Escribe tu nombre</string>
 </resources>

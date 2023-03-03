@@ -20,7 +20,8 @@ public class ShowNoteActivity extends AppCompatActivity {
     private Bundle extras;
     private String paquete1;
     protected DataBaseSQL db;
-    private  int id = 0;
+    private int id = 0;
+    private String contenidoCaja1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,8 +53,12 @@ public class ShowNoteActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                id = getTaskId();
-                db.deleteNote(id);
+                /*label1.getId(contenidoCaja1);
+                id = Integer.parseInt(contenidoCaja1);
+                System.out.println("--> Imprimo supuesto id: " + id);
+                System.out.println("--> Imprimo contenidoCaja: " + contenidoCaja1);*/
+
+                //db.deleteNote(Integer.parseInt(contenidoCaja1));
                 Toast.makeText(ShowNoteActivity.this, "Nota borrada correctamente", Toast.LENGTH_SHORT).show();
                 pasarPantalla = new Intent(ShowNoteActivity.this, ListActivity.class);
                 finish();
