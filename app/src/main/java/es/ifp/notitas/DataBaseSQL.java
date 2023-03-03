@@ -63,21 +63,6 @@ public class DataBaseSQL extends SQLiteOpenHelper {
         }
         return filas;
     }
-    public ArrayList<String> getNote(){
-        ArrayList<String> filas = new ArrayList<String>();
-        String contenido = "";
-        Cursor res = null;
-        db = this.getReadableDatabase();
-        res = db.rawQuery("SELECT * FROM notes WHERE id='+id+'", null);
-        res.moveToFirst();
-        while (res.isAfterLast()==false){
-            contenido = res.getString(res.getColumnIndex("title"));
-            //System.out.println("-->" + contenido);
-            filas.add(contenido);
-            res.moveToNext();
-        }
-        return filas;
-    }
 
     public void close(){
         db.close();

@@ -19,6 +19,8 @@ public class ShowNoteActivity extends AppCompatActivity {
     private Intent pasarPantalla;
     private Bundle extras;
     private String paquete1;
+    protected DataBaseSQL db;
+    private  int id = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,8 @@ public class ShowNoteActivity extends AppCompatActivity {
         label1 = (TextView) findViewById(R.id.label1_show);
         btn1 = (Button) findViewById(R.id.btn1_show);
         btn2 = (Button) findViewById(R.id.btn2_show);
+
+        db = new DataBaseSQL(this);
 
         extras = getIntent().getExtras();
         if(extras != null){
@@ -48,8 +52,12 @@ public class ShowNoteActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                id = getTaskId();
+                db.deleteNote(id);
                 Toast.makeText(ShowNoteActivity.this, "Nota borrada correctamente", Toast.LENGTH_SHORT).show();
-
+                pasarPantalla = new Intent(ShowNoteActivity.this, ListActivity.class);
+                finish();
+                startActivity(pasarPantalla);
             }
         });
     }
