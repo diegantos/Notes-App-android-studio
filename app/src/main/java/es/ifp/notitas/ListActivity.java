@@ -44,7 +44,10 @@ public class ListActivity extends AppCompatActivity {
         lista1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                contenidoItem = adapterView.getItemAtPosition(i).toString();
+
                 Intent pasarPantalla = new Intent(ListActivity.this, ShowNoteActivity.class);
+                pasarPantalla.putExtra("NOTA", contenidoItem);
                 finish();
                 startActivity(pasarPantalla);
             }

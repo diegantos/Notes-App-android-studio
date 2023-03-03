@@ -68,7 +68,7 @@ public class DataBaseSQL extends SQLiteOpenHelper {
         String contenido = "";
         Cursor res = null;
         db = this.getReadableDatabase();
-        res = db.rawQuery("SELECT * FROM notes ORDER BY id ASC", null);
+        res = db.rawQuery("SELECT * FROM notes WHERE id='+id+'", null);
         res.moveToFirst();
         while (res.isAfterLast()==false){
             contenido = res.getString(res.getColumnIndex("title"));
