@@ -53,7 +53,7 @@ public class ListActivity extends AppCompatActivity {
             }
         });
 
-        lista1.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+        /*lista1.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
 
@@ -64,7 +64,7 @@ public class ListActivity extends AppCompatActivity {
 
                 return true;
             }
-        });
+        });*/
     }
 
     @Override
