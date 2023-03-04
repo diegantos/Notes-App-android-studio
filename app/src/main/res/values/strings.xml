@@ -14,4 +14,9 @@
     <string name="btn2_create">VOLVER</string>
     <string name="toast1_create">Debe introducir una nota</string>
     <string name="toast2_create">Nota creada correctamente</string>
+
+    <string name="label2_show">INFORMACIÓN DE LA NOTA</string>
+    <string name="btn1_show">VOLVER</string>
+    <string name="btn2_show">BORRAR</string>
+    <string name="toast1_show">Nota borrada correctamente</string>
 </resources>
