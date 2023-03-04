@@ -13,5 +13,5 @@
     <string name="btn1_create">CREAR</string>
     <string name="btn2_create">VOLVER</string>
     <string name="toast1_create">Debe introducir una nota</string>
-    <string name="toast2_create">Nota creada correctamente
+    <string name="toast2_create">Nota creada correctamente</string>
 </resources>
