@@ -1,22 +1,23 @@
 <resources>
     <string name="app_name">Notas</string>
 
-    <string name="label1_list">LISTADO DE NOTAS</string>
+    <string name="label1_list">LISTA DE NOTAS</string>
 
-    <string name="label1_delete">¿Desea borrar realmente todas las notas?</string>
+    <string name="label1_delete">¿Desea realmente borrar todas las notas?</string>
     <string name="btn1_delete">BORRAR TODAS LAS NOTAS</string>
     <string name="btn2_delete">VOLVER</string>
-    <string name="toast1_delete">Se han eliminado todas las notas correctamente</string>
+    <string name="toast1_delete">Notas eliminadas correctamente</string>
 
-    <string name="label1_create">ESCRIBE UNA NOTA:</string>
-    <string name="input1_create">Escriba aquí su nueva nota</string>
+    <string name="label1_create">ESCRIBA UNA NUEVA NOTA:</string>
+    <string name="input1_create">Debe introducir una nota</string>
     <string name="btn1_create">CREAR</string>
     <string name="btn2_create">VOLVER</string>
-    <string name="toast1_create">Debe introducir una nota</string>
+    <string name="toast1_create">Necesita escribir para introducir una nota</string>
     <string name="toast2_create">Nota creada correctamente</string>
 
     <string name="label2_show">INFORMACIÓN DE LA NOTA</string>
     <string name="btn1_show">VOLVER</string>
     <string name="btn2_show">BORRAR</string>
-    <string name="toast1_show">Nota borrada correctamente</string>
+    <string name="toast1_show">La nota ha sido eliminada correctamente</string>
+
 </resources>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Notes</string>
+
+    <string name="label1_list">Desitja esborrar realment totes les notes?</string>
+
+    <string name="label1_delete">" Desitja esborrar realment totes les notes?"</string>
+    <string name="btn1_delete">ESBORRAR TOTES LES NOTES</string>
+    <string name="btn2_delete">" TORNAR"</string>
+    <string name="toast1_delete">Se han eliminado todas las notas correctamente CA</string>
+
+    <string name="label1_create">" ESCRIU UNA NOTA"</string>
+    <string name="input1_create">" Escrigui aquí la seva nova nota"</string>
+    <string name="btn1_create">CREAR</string>
+    <string name="btn2_create">" TORNAR"</string>
+    <string name="toast1_create">Debe introducir una nota CA</string>
+    <string name="toast2_create">" Nota creada correctament"</string>
+
+    <string name="label2_show">" INFORMACIÓ DE LA NOTA"</string>
+    <string name="btn1_show">" TORNAR"</string>
+    <string name="btn2_show">" TORNAR"</string>
+    <string name="toast1_show">Nota borrada correctamente CA</string>
+</resources>

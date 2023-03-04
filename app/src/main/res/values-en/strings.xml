@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Notes</string>
+
+    <string name="label1_list">LIST OF NOTES</string>
+
+    <string name="label1_delete">Do you really want to delete the notes?</string>
+    <string name="btn1_delete">DELETE ALL NOTES</string>
+    <string name="btn2_delete">RETURN</string>
+    <string name="toast1_delete">All notes have been deleted</string>
+
+    <string name="label1_create">WRITE A NEW NOTE:</string>
+    <string name="input1_create">Please, write here the new note</string>
+    <string name="btn1_create">CREATE</string>
+    <string name="btn2_create">RETURN</string>
+    <string name="toast1_create">You need to write something to introduce a new note</string>
+    <string name="toast2_create">Note successfully created</string>
+
+    <string name="label2_show">INFORMATION ABOUT THE NOTE</string>
+    <string name="btn1_show">RETURN</string>
+    <string name="btn2_show">DELETE</string>
+    <string name="toast1_show">The note has been deleted</string>
+</resources>
