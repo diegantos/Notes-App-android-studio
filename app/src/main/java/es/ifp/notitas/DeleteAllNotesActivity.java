@@ -32,7 +32,7 @@ public class DeleteAllNotesActivity extends AppCompatActivity {
                 pasarPantalla = new Intent(DeleteAllNotesActivity.this, ListActivity.class);
                 finish();
                 startActivity(pasarPantalla);
-                Toast.makeText(DeleteAllNotesActivity.this, "Se han eliminado todas las notas correctamente", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DeleteAllNotesActivity.this, getString(R.string.toast1_delete), Toast.LENGTH_SHORT).show();
             }
         });
 

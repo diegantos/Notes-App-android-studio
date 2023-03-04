@@ -59,7 +59,7 @@ public class ShowNoteActivity extends AppCompatActivity {
                 System.out.println("--> Imprimo contenidoCaja: " + contenidoCaja1);*/
 
                 //db.deleteNote(Integer.parseInt(contenidoCaja1));
-                Toast.makeText(ShowNoteActivity.this, "Nota borrada correctamente", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ShowNoteActivity.this, getString(R.string.toast1_show), Toast.LENGTH_SHORT).show();
                 pasarPantalla = new Intent(ShowNoteActivity.this, ListActivity.class);
                 finish();
                 startActivity(pasarPantalla);
