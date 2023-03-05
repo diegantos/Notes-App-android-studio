@@ -6,15 +6,14 @@ App móvil para introducción de notas personales
 
 ## ¿Qué he aprendido en este proyecto? 🙇🏻 
 
-He realizado mi primera App para dispositivos Android creando una simple interfaz para introducir notas personales.
-
+He realizado mi primera App para un dispositivo Android creando una simple interfaz para introducir notas personales.
 
 ## Tecnologías 🛠
 <!-- Iconos sacados de: https://github.com/hendrasob/badges/blob/master/README.md y https://github.com/alexandresanlim/Badges4-README.md-Profile -->
-[![JAVA](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)](https://es.wikipedia.org/wiki/java)
 [![ANDROID](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://es.wikipedia.org/wiki/android)
+[![JAVA](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)](https://es.wikipedia.org/wiki/java)
 [![ANDROID STUDIO](https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white)](https://es.wikipedia.org/wiki/android-studio)
-[![GIT](https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white)](https://es.wikipedia.org/wiki/git)
+[![GIT](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)](https://es.wikipedia.org/wiki/git)
 
 ## Vista previa del proyecto
 Si quieres hechar un vistazo al proyecto, te recomiendo:
