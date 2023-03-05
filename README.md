@@ -4,9 +4,10 @@
 ## Descripción 📑
 App móvil para introducción de notas personales
 
-## ¿Qué he aprendido en este proyecto? 🙇🏻 
-
+## Sobre el proyecto 🙇🏻 
 He realizado mi primera App para un dispositivo Android creando una simple interfaz para introducir notas personales.
+* En ella puedes introducir notas y clicar sobre cada una de la lista para acceder a su información con botones de retorno a la actividad anterior
+* En el ActionBar implementado hay dos botones para crear una nueva nota y otro para eliminar todas las notas de la actividad del listado
 
 ## Tecnologías 🛠
 <!-- Iconos sacados de: https://github.com/hendrasob/badges/blob/master/README.md y https://github.com/alexandresanlim/Badges4-README.md-Profile -->
