@@ -51,10 +51,6 @@ public class ShowNoteActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*label1.getId(contenidoCaja1);
-                id = Integer.parseInt(contenidoCaja1);
-                System.out.println("--> Imprimo supuesto id: " + id);
-                System.out.println("--> Imprimo contenidoCaja: " + contenidoCaja1);*/
 
                 String texto = label1.getText().toString();
                 db.deleteNote(texto);
