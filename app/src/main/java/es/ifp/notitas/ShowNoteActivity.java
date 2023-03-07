@@ -11,8 +11,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class ShowNoteActivity extends AppCompatActivity {
-
-
     protected TextView label1;
     protected Button btn1;
     protected Button btn2;
@@ -58,7 +56,9 @@ public class ShowNoteActivity extends AppCompatActivity {
                 System.out.println("--> Imprimo supuesto id: " + id);
                 System.out.println("--> Imprimo contenidoCaja: " + contenidoCaja1);*/
 
-                //db.deleteNote(Integer.parseInt(contenidoCaja1));
+                String texto = label1.getText().toString();
+                db.deleteNote(texto);
+
                 Toast.makeText(ShowNoteActivity.this, getString(R.string.toast1_show), Toast.LENGTH_SHORT).show();
                 pasarPantalla = new Intent(ShowNoteActivity.this, ListActivity.class);
                 finish();

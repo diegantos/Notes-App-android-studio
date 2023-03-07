@@ -21,7 +21,6 @@ public class ListActivity extends AppCompatActivity {
     protected TextView label1;
     protected ListView lista1;
     protected DataBaseSQL db;
-
     private ArrayList<String> filas = new ArrayList<String>();
     private ArrayAdapter<String> adaptador;
     private String contenidoItem = "";

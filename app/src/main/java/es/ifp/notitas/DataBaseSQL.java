@@ -33,9 +33,13 @@ public class DataBaseSQL extends SQLiteOpenHelper {
         db = this.getReadableDatabase();
         db.execSQL("INSERT INTO notes (title) VALUES ('"+title+"')");
     }
-    public void deleteNote(int id){
+    /*public void deleteNote(int id){
         db = this.getReadableDatabase();
         db.execSQL("DELETE FROM notes WHERE id=" + id);
+    } */
+    public void deleteNote(String title){
+        db = this.getReadableDatabase();
+        db.execSQL("DELETE FROM notes WHERE title='"+title+"'");
     }
     public void deleteAllNotes(){
         db = this.getWritableDatabase();
