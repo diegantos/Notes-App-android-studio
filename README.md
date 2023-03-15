@@ -7,6 +7,7 @@ App móvil para introducción de notas personales
 ## Sobre el proyecto 🙇🏻 
 He realizado mi primera App para un dispositivo Android creando una simple interfaz para introducir notas personales.
 * En ella puedes introducir notas y clicar sobre cada una de la lista para acceder a su información con botones de retorno a la actividad anterior
+* Las notas se almacenan en una base de datos de forma que siempre son accesibles
 * En el ActionBar implementado hay dos botones para crear una nueva nota y otro para eliminar todas las notas de la actividad del listado
 * La aplicación está implementada en varios idiomas (español, inglés y catalán) para que se muestre en función del idioma en los ajustes del smartphone
 
